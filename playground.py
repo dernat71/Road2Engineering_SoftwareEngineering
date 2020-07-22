@@ -5,6 +5,8 @@ class Car:
     engine = None
     brand = None
     number_of_seats = None
+    __private_attribute = "secret"
+    _protected_attribute = "not that secret"
 
     def __init__(self, owner, number_of_wheels, engine, brand, number_of_seats):
         self.owner = owner
@@ -12,6 +14,8 @@ class Car:
         self.engine = engine
         self.brand = brand
         self.number_of_seats = number_of_seats
+
+        print(self.__private_attribute)
 
     def start(self):
         print(f"{self.owner}'s car : Vroum vroum")
@@ -30,13 +34,14 @@ class Car:
 # -------------------------------------------------------------------
 
 my_car = Car(owner = "Nathan", number_of_wheels=4, number_of_seats=2, brand="BMW", engine=116)
-print(my_car)
-my_car.start()
-my_car.break_speed()
-my_car.stop()
-
 mom_car = Car(owner = "Mummy", number_of_wheels=4, number_of_seats=4, brand="Aston", engine="V8")
-print(mom_car)
-mom_car.start()
-mom_car.break_speed()
-mom_car.stop()
+
+cars = [my_car, mom_car]
+
+for car in cars :
+
+    print("--"*10)
+    print(car)
+    car.start()
+    car.break_speed()
+    car.stop()
