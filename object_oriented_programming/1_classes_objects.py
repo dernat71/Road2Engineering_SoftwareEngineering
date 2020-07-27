@@ -5,8 +5,6 @@ class Car:
     engine = None
     brand = None
     number_of_seats = None
-    __private_attribute = "secret"
-    _protected_attribute = "not that secret"
 
     def __init__(self, owner, number_of_wheels, engine, brand, number_of_seats):
         self.owner = owner
@@ -14,8 +12,6 @@ class Car:
         self.engine = engine
         self.brand = brand
         self.number_of_seats = number_of_seats
-
-        print(self.__private_attribute)
 
     def start(self):
         print(f"{self.owner}'s car : Vroum vroum")
