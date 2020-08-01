@@ -10,7 +10,7 @@ with open('requirements.txt') as f:
         requirements.append(str(req).replace('==', '>='))
 
 setup(
-    name="salutations_maker", # Replace with your own username
+    name="salutations-maker", # Replace with your own username
     version="0.0.1",
     author="Nathan Derave",
     author_email="nathan.derave@accenture.com",
