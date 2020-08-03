@@ -1,5 +1,3 @@
-from src.greetings import say_hello
-say_hello("Nathan", "FR")
-
-import src
-src.say_hello("Alice", "EN")
+# Run with : python playground
+from greetings import say_hello
+say_hello("Alice", "FR")
